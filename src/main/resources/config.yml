@@ -1,1 +1,4 @@
+prefix: '&2[&6ClickOnPlayers&2] '
 MessageOnClick: '&b&l[ &6&l{PLAYER} &b&l]'
+displayTime: 3
+#Display time in seconds

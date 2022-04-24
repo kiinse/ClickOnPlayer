@@ -2,6 +2,7 @@ package kiinse.plugin.clickonplayer.clickonplayer.listeners;
 
 import kiinse.plugin.clickonplayer.clickonplayer.ClickOnPlayer;
 import kiinse.plugin.clickonplayer.clickonplayer.utilities.ClickUtils;
+import kiinse.plugin.clickonplayer.clickonplayer.utilities.SendMessage;
 import kiinse.plugins.api.darkwaterapi.utilities.Utils;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,7 +16,7 @@ public class NonPlaceholdersInteractListener implements Listener {
     @EventHandler
     public void interactEvent(PlayerInteractEntityEvent event) {
         if (ClickUtils.canInteract(event)) {
-            utils.sendActionBar(event.getPlayer(), utils.colorize(utils.replaceWord(utils.getMessageFromConfig("MessageOnClick"), "{PLAYER}", event.getRightClicked().getName())));
+            new SendMessage().sendToPlayer(event.getPlayer(), utils.colorize(utils.replaceWord(utils.getMessageFromConfig("MessageOnClick"), "{PLAYER}", event.getRightClicked().getName())));
         }
     }
 }

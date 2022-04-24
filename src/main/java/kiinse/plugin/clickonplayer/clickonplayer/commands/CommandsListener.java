@@ -10,7 +10,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-
 import java.io.IOException;
 import java.util.logging.Level;
 
@@ -30,6 +29,8 @@ public class CommandsListener implements CommandExecutor {
                     } else {
                         try {
                             var init = new Initialize();
+                            plugin.reloadConfig();
+                            plugin.saveConfig();
                             init.loadFiles();
                             init.loadMessages();
                             utils.sendMessageWithPrefix(sender, Messages.getClickMessages(), senderLocale, "pluginReloaded");
