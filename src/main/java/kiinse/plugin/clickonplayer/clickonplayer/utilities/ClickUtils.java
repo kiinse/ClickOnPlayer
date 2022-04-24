@@ -17,7 +17,7 @@ public class ClickUtils {
     public static boolean canInteract(PlayerInteractEntityEvent event) {
         var player = event.getPlayer();
         var entity = event.getRightClicked();
-        return entity instanceof Player && player.hasPermission("ClickOnPlayer.see") && entity.hasPermission("ClickOnPlayer.show") && Worlds.hasWorld(player.getWorld());
+        return entity instanceof Player && ((player.hasPermission("ClickOnPlayer.see") && entity.hasPermission("ClickOnPlayer.show")) || player.hasPermission("ClickOnPlayer.admin.see")) && Worlds.hasWorld(player.getWorld());
     }
 
     public static String getCurrentApiVersion() {

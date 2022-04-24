@@ -27,3 +27,6 @@ permissions:
   ClickOnPlayer.show:
     description: Allows other players to see your nickname
     default: op
+  ClickOnPlayer.admin.see:
+    description: Allows right click on player to see his nickname
+    default: op

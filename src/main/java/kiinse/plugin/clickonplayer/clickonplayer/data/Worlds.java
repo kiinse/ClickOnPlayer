@@ -15,14 +15,14 @@ public class Worlds {
 
     public static void load(List<String> enabledWorldsList) throws IllegalArgumentException {
         enabledWorlds.clear();
-        if (!enabledWorldsList.isEmpty()) {
-            for (String rawData : enabledWorldsList) {
+        if (enabledWorldsList.isEmpty()) {
+            throw new IllegalArgumentException("Enabled worlds list is empty. Check file 'worlds.yml'");
+        } else {
+            for (var rawData : enabledWorldsList) {
                 enabledWorlds.add(rawData);
                 log.debug("World: {}", rawData);
             }
             plugin.getLogger().log(Level.INFO, "Enabled worlds hashmap loaded");
-        } else {
-            throw new IllegalArgumentException("Enabled worlds list is empty. Check file 'worlds.yml'");
         }
     }
 
