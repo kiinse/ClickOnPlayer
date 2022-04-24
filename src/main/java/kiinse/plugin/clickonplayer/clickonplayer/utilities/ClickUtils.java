@@ -1,6 +1,7 @@
 package kiinse.plugin.clickonplayer.clickonplayer.utilities;
 
 import kiinse.plugin.clickonplayer.clickonplayer.ClickOnPlayer;
+import kiinse.plugin.clickonplayer.clickonplayer.data.Worlds;
 import lombok.extern.slf4j.Slf4j;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
@@ -16,7 +17,7 @@ public class ClickUtils {
     public static boolean canInteract(PlayerInteractEntityEvent event) {
         var player = event.getPlayer();
         var entity = event.getRightClicked();
-        return entity instanceof Player && player.hasPermission("ClickOnPlayer.see") && entity.hasPermission("ClickOnPlayer.show");
+        return entity instanceof Player && player.hasPermission("ClickOnPlayer.see") && entity.hasPermission("ClickOnPlayer.show") && Worlds.hasWorld(player.getWorld());
     }
 
     public static String getCurrentApiVersion() {
