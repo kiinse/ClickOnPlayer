@@ -9,6 +9,10 @@ authors: [ kiinse ]
 description: Плагин, позволяющий показать информацию при нажатии на игрока
 website: https://github.com/kiinse
 commands:
+  click:
+    description: Plugin command
+    usage: /<command>
+    permission: ClickOnPlayer.reload
   click reload:
     description: Reload command
     usage: /<command> reload

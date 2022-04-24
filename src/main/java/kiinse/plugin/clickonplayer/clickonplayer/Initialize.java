@@ -32,17 +32,13 @@ public class Initialize {
     }
 
     public void registerEvents() {
-        if (plugin.getConfig().getBoolean("enabled")) {
-            plugin.getLogger().log(Level.INFO, "Registering listeners...");
-            if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
-                plugin.getServer().getPluginManager().registerEvents(new PlaceholdersInteractListener(), plugin);
-            } else {
-                plugin.getServer().getPluginManager().registerEvents(new NonPlaceholdersInteractListener(), plugin);
-            }
-            plugin.getLogger().log(Level.INFO, "Listeners registered");
+        plugin.getLogger().log(Level.INFO, "Registering listeners...");
+        if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+            plugin.getServer().getPluginManager().registerEvents(new PlaceholdersInteractListener(), plugin);
         } else {
-            plugin.getLogger().log(Level.INFO, "Plugin disabled in config. Events will not be registered");
+            plugin.getServer().getPluginManager().registerEvents(new NonPlaceholdersInteractListener(), plugin);
         }
+        plugin.getLogger().log(Level.INFO, "Listeners registered");
     }
 
     public void loadFiles() throws IOException {

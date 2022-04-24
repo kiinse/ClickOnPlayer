@@ -9,12 +9,12 @@ public final class ClickOnPlayer extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
+        start(this);
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        stop(this);
     }
 
     public void start(Plugin plugin) {
