@@ -1,0 +1,15 @@
+{
+  "en" : {
+    "noCommand": "&cCommand not found!",
+    "noPermission": "&cYou do not have permission to do this!",
+    "pluginReloaded": "&aPlugin has been reloaded",
+    "errorOnReloading":"&cError on plugin reloading. Check logs."
+  },
+  "ru" : {
+    "noCommand": "&cКоманда не найдена!",
+    "noPermission": "&cУ вас не прав на выполнение этой команды!",
+    "pluginDisabled": "&cПлагин был выключен",
+    "pluginReloaded": "&aПлагин был перезагружен",
+    "errorOnReloading":"&cПроизошла ошибка при перезагрузке плагина. Проверьте логи."
+  }
+}

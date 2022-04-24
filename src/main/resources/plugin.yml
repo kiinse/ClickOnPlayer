@@ -1,0 +1,25 @@
+name: ClickOnPlayer
+version: '${project.version}'
+main: kiinse.plugin.clickonplayer.clickonplayer.ClickOnPlayer
+api-version: 1.18
+prefix: COP
+depend: [ DarkWaterAPI ]
+softdepend: [ PlaceholderAPI ]
+authors: [ kiinse ]
+description: Плагин, позволяющий показать информацию при нажатии на игрока
+website: https://github.com/kiinse
+commands:
+  click reload:
+    description: Reload command
+    usage: /<command> reload
+    permission: ClickOnPlayer.reload
+permissions:
+  ClickOnPlayer.reload:
+    description: Allows /click reload
+    default: op
+  ClickOnPlayer.see:
+    description: Allows right click on player to see his nickname
+    default: op
+  ClickOnPlayer.show:
+    description: Allows other players to see your nickname
+    default: op
