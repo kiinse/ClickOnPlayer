@@ -5,8 +5,6 @@
 
 - /click reload
 
-select Countries.name as Country, COUNT(*) as Amount from Countries inner join Cities on Cities.country_id = Countries.id inner join Companies on Companies.city_id = Cities.id where  Companies.labors >+ 1000 group by Countries.name;
-
 ## Права:
 
 - ClickOnPlayer.reload - Возможность перезагрузки плагина
